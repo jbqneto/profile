@@ -1,0 +1,20 @@
+@import 'functions';
+@import '_colors.scss';
+@import '_typography.scss';
+@import '_layout.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  width: 100%;
+  background-color: $black-dark;
+}
+
+.border {
+  border: 1px solid red;
+}
