@@ -2,9 +2,10 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 48px 16px;
+  padding: 32px 16px;
 }
 
+/** start of 960 > **/
 
 @media screen and (max-width: 960px) {
   .hero {
@@ -22,7 +23,14 @@
   .menu-right {
     display: none;
   }
+
+  .svg-hero {
+    transform: scale(2) rotate(25deg);
+  }
+
 }
+
+//** < end of 960 **//
 
 .container {
   max-width: 1220px;
@@ -38,8 +46,36 @@
   height: 90vh;
 }
 
+
+.bg-hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -10;
+  transform: translate(-0%, -25%);
+}
+
+.square-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 56px;
+}
+
 .container-item {
   margin: 40px 0px;
+}
+
+.container-item h1 {
+  padding-bottom: 10vh;
 }
 
 .container-item:nth-child(1) {
@@ -51,7 +87,71 @@
   flex-grow: 1;
 
   img {
-    max-width: 394px;
+    max-width: 320px;
   }
 
+}
+
+
+.list h5 {
+  color: $gray-normal;
+  margin-right: rem(16);
+}
+
+.list-job, .list-item {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 24px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.list-job {
+  display: flex;
+}
+
+.list-job .company {
+  flex: 1;
+}
+
+.list-job .about {
+  flex: 3;
+}
+
+.list-item {
+
+  position: relative;
+
+  a {
+
+    &:hover {
+      & + .img-project {
+        transform: translate(-50%, -50%) translate3d(0, 0, 0);
+        opacity: 1;
+      }
+    }
+
+  }
+
+}
+
+.img-project {
+  max-width: 360px;
+  border-radius: 4px;
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  z-index: -1;
+
+  transition: .5s ease;
+  opacity: 0;
+  transform: translate(-50%, -50%) translate3d(-1000px, 0, 0) skewX(45deg);
+}
+
+.bb-gray {
+  width: 100%;
+  border-bottom: 1px solid $black-light;
 }

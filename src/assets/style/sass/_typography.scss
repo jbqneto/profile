@@ -57,6 +57,7 @@ h2 {
 
 h3 {
   font-size: rem(40);
+  line-height: 110%;
 }
 
 h4 {
@@ -111,7 +112,7 @@ h6 {
     width: 120px;
     height: 120px;
 
-    transform: translate(10%, -25%) rotate(45deg);
+    transform: translate(-10%, -25%) rotate(45deg);
     background: linear-gradient(225deg, #2DC7ED 0%, rgba(83, 139, 240, 0) 100%);
 
     border-radius: 6px;
@@ -121,8 +122,8 @@ h6 {
 
   &:hover {
     &::after {
-      transform: translate(10%, -25%) rotate(90deg);
-      border-radius: 100%;
+      transform: translate(-10%, -25%) rotate(90deg);
+      border-radius: 10%;
     }
   }
 
